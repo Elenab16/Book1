@@ -3,8 +3,8 @@ from .models import Book
 from .forms import BookForm
 
 def home(request):
-    return render(request, 'myapp/home.html')
-
+    #return render(request, 'myapp/home.html')
+    return render(request,'my app/index.htlm')
 def book_list(request):
     books = Book.objects.all()
     return render(request, 'myapp/book_list.html', {'books': books})
