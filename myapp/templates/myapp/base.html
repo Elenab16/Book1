@@ -4,28 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}{% endblock %}</title>
-    <!-- Añade aquí cualquier enlace a CSS, JS o CDN que necesites -->
 </head>
 <body>
-    <!-- Encabezado común a todas las páginas -->
     <header>
-        <h1>Encabezado</h1>
+        <h1>Aplicacion de catalogo de libros</h1>
         <nav>
             <ul>
                 <li><a href="{% url 'home' %}">Inicio</a></li>
-                <!-- Añade aquí más enlaces a otras páginas -->
+                <li><a href="{% url 'book_list' %}">Listar Libros</a></li>
+                <li><a href="{% url 'book_create' %}">Agregar Libro</a></li>
             </ul>
         </nav>
     </header>
-
-    <!-- Contenido específico de cada página -->
     <main>
         {% block content %}{% endblock %}
     </main>
-
-    <!-- Pie de página común a todas las páginas -->
-    <footer>
-        <p>Pie de página</p>
-    </footer>
 </body>
 </html>

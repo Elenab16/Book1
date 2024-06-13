@@ -4,7 +4,7 @@
     <h2>Lista de Libros</h2>
     <ul>
         {% for book in books %}
-            <li>{{ book.title }} - {{ book.author }}</li>
+            <li>{{ book.title }} - {{ book.author }} - {{ book.publication_date }} </li>
         {% endfor %}
     </ul>
 {% endblock %}

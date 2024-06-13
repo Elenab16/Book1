@@ -2,8 +2,8 @@ from django.shortcuts import render, redirect
 from .models import Book
 from .forms import BookForm
 
-
-# Crear la vista.
+def home(request):
+    return render(request, 'myapp/home.html')
 
 def book_list(request):
     books = Book.objects.all()
