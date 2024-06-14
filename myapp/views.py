@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from .models import Book
 from .forms import BookForm
 
-def home(request):
+def index(request):
     #return render(request, 'myapp/home.html')
     return render(request,'my app/index.htlm')
 def book_list(request):
