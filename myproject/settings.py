@@ -11,9 +11,19 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 import os
 from pathlib import Path
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-#BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# URL to use when referring to static files located in STATICFILES_DIRS
+STATIC_URL = '/static/'
+
+# Additional locations of static files
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'myapp/static'),
+]
+
+# Directory to collect static files for production
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 
 
@@ -121,4 +131,12 @@ STATIC_URL = "/static/"
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+{
+# "python.pythonPath": "/opt/anaconda3/bin/python",  # Ajusta esta ruta según tu instalación de Python
+  "python.analysis.extraPaths": [
+    "/Users/elenabarroso/Desktop/programacion/book1",
+    "/opt/anaconda3/lib/python3.8/site-packages"
+  ]
+}
+
 
