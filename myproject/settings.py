@@ -19,7 +19,7 @@ STATIC_URL = '/static/'
 
 # Additional locations of static files
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'myapp/static'),
+    os.path.join(BASE_DIR, 'myapp', 'static'),
 ]
 
 # Directory to collect static files for production
