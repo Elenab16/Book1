@@ -14,18 +14,6 @@ from pathlib import Path
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# URL to use when referring to static files located in STATICFILES_DIRS
-STATIC_URL = '/static/'
-
-# Additional locations of static files
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'myapp', 'static'),
-]
-
-# Directory to collect static files for production
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
-
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 
