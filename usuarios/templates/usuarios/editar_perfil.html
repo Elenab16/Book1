@@ -1,16 +1,21 @@
 {% extends "myapp/home.html" %}
+
 {% block title_head %}
-Registro
+Editar perfil
 {% endblock title_head %}
+
 {% block h1_header %}
-Registro
+Editar perfil
 {% endblock h1_header %}
+
 {% block main %}
 
-<form action={% url "registro" %} method="post">
+<form action={% url "editar_perfil" %} method="POST" enctype='multipart/form-data'>
     {% csrf_token %}
     {{formulario}}
-    <input type="submit" value="Registrarse">
+    <input type="submit" value="Editar">
 </form>
+
+<a href={% url "cambiar_pass" %}>Cambiar password</a>
 
 {% endblock main %}

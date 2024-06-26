@@ -1,6 +1,19 @@
-<h2>Iniciar Sesión</h2>
-<form method="post">
+
+{% extends "myapp/home.html" %}
+{% block title_head %}
+Inicio de sesion
+{% endblock title_head %}
+{% block h1_header %}
+Iniciar sesion
+{% endblock h1_header %}
+{% block main %}
+
+<form action={% url "login" %} method="post">
     {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Iniciar Sesión</button>
+    {{formulario}}
+    <input type="submit" value="Iniciar sesion">
 </form>
+
+{% endblock main %}
+
+

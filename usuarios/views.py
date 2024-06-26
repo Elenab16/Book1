@@ -29,7 +29,7 @@ def login(request):
             user = authenticate(request, username=usuario, password=contrasenia)
             login_django(request, user)
 
-            return redirect('index')
+            return redirect('myapp')
 
     return render(request, 'usuarios/inicio_de_sesion.html', {"formulario": formulario})
 
