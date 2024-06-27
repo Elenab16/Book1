@@ -3,6 +3,8 @@ from django.urls import path, include
 from myapp import views
 from django.contrib.auth import views as auth_views  # Importa las vistas de autenticación de Django
 from usuarios import views as usuario_views  # Importa las vistas de la aplicacion usuarios
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns= [
     path('admin/', admin.site.urls),
@@ -12,6 +14,7 @@ urlpatterns= [
     path('', include('usuarios.urls')),  # Incluye las rutas de la aplicación usuarios
     path('registro/', usuario_views.registro, name='registro'),  # Usa la vista de registro de la aplicación usuarios
 ]
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 
 
