@@ -15,7 +15,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "my_app/static"),
+    os.path.join(BASE_DIR, "myapp/static"),
+    os.path.join(BASE_DIR, 'static'),
+    
 ]
 
 
@@ -62,7 +64,13 @@ ROOT_URLCONF = "myproject.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [os.path.join(BASE_DIR / 'templates')],
+        "DIRS":[
+            os.path.join(BASE_DIR, 'book1/templates'),
+            os.path.join(BASE_DIR, 'myapp/templates'),
+            os.path.join(BASE_DIR, 'usuarios/templates'),
+            os.path.join(BASE_DIR, 'templates'),  # Directorio común de plantillas
+        ],
+        
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
